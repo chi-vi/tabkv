@@ -1,0 +1,9 @@
+name: tabkv
+version: 0.1.0
+
+authors:
+  - Nipinium <nipinium@gmail.com>
+
+crystal: 1.2.1
+
+license: MIT
