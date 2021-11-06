@@ -83,6 +83,10 @@ class Tabkv
     save!(dirty: true) if @upds.size >= flush
   end
 
+  def set!(key : String, value : Nil) : Bool
+    !!delete(key)
+  end
+
   def set!(key : String, value) : Bool
     return false unless value = set(key, value)
     @upds[key] = value
