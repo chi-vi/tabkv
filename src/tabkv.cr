@@ -156,12 +156,12 @@ class Tabkv
     if @data.empty?
       File.delete(@file) if File.exists?(@file)
       return
-    else
-      FileUtils.mkdir_p(File.dirname(@file))
     end
 
     output = dirty ? @upds : @data
+    return if output.empty?
 
+    FileUtils.mkdir_p(File.dirname(@file))
     File.open(@file, dirty ? "a" : "w") do |io|
       output.each_with_index do |(key, value), idx|
         io << '\n' if idx > 0 || dirty
