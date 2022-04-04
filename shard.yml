@@ -1,8 +1,8 @@
 name: tabkv
-version: 0.1.0
+version: 0.2.0
 
 authors:
-  - NP Nam <me@npn.am>
+  - Nguyen Phuong Nam <me@npn.am>
 
 crystal: 1.2.1
 
